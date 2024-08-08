@@ -59,16 +59,6 @@ export const Header = () => {
                 Portfolio
               </HashLink>
             </li>
-            <li
-              onClick={() => {
-                setOpenNav(false);
-              }}
-              className={`nav-item p-2 md:p-3  font-semibold cursor-pointer`}
-            >
-              <a href="#education" className="block">
-                Education
-              </a>
-            </li>
           </ul>
         </nav>
       </div>
