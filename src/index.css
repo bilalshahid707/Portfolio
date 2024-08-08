@@ -70,6 +70,20 @@ section {
   }
 }
 
+.hero-content {
+  animation: hero 1s ease-in-out forwards;
+}
+
+@keyframes hero {
+  0% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 .nav-item a {
   transition: all 0.3s;
   position: relative;

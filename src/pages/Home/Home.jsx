@@ -38,7 +38,7 @@ export const Home = () => {
 
   return (
     <>
-      <section className="hero bg-bg1 h-[90vh] ">
+      <section className="hero bg-bg1 h-[90vh] bg-fixed ">
         <div
           className="container max-w-[90rem] mx-auto
          flex p-6 px-3 items-center lg:-mt-0 justify-center h-full "
@@ -108,19 +108,19 @@ export const Home = () => {
           <Animate classname=".about-heading">
             <div
               data="ABOUT ME"
-              className="text-2xl small:text-4xl z-10 text-primary  translate-y-[1000px] opacity-0  font-extrabold about-heading transition-[transform] duration-1000 delay-75 text-center  main-heading"
+              className="text-2xl small:text-4xl z-10 text-primary  scale-50 opacity-0  font-extrabold about-heading transition-all duration-1000 origin-center delay-75 text-center  main-heading"
             >
               ABOUT ME
             </div>
           </Animate>
 
           <Animate classname={".about-heading-2"}>
-            <div className="heading text-primary text-2xl  translate-y-[1000px] opacity-0  transition-[transform] duration-1000 delay-75 ease-in-out small:text-3xl text-center font-bold mt-6 about-heading-2">
+            <div className="heading text-primary text-2xl  opacity-0  scale-50 transition-all duration-1000 origin-center delay-75 ease-in-out small:text-3xl text-center font-bold mt-6 about-heading-2">
               <span className="text-secondary"> Meet</span> Muhammad Bilal
             </div>
           </Animate>
           <Animate classname={".intro"}>
-            <p className="intro text-secondary  translate-y-[1000px] opacity-0  transition-[transform] duration-1000 delay-75 ease-in-out text-center text-base medium:text-xl">
+            <p className="intro text-secondary  scale-50 opacity-0  transition-all duration-1000 origin-center delay-75 ease-in-out text-center text-base medium:text-xl">
               I'm currently pursuing my Bachelor's degree at the University of
               Engineering and Technology. I'm an aspiring MERN stack developer
               with a solid background in front-end technologies like HTML, CSS,
@@ -130,7 +130,7 @@ export const Home = () => {
             </p>
           </Animate>
           <Animate classname={".about-heading-3"}>
-            <div className="heading about-heading-3 text-secondary text-2xl small:text-3xl  text-center font-bold  mt-6  translate-y-[1000px] opacity-0  transition-[transform] duration-1000 delay-75 ease-in-out ">
+            <div className="heading about-heading-3 text-secondary text-2xl small:text-3xl  text-center font-bold  mt-6  scale-50 opacity-0  transition-all duration-1000 origin-center delay-75 ease-in-out ">
               What I’m Good At
             </div>
           </Animate>
@@ -138,7 +138,7 @@ export const Home = () => {
           <div className="skills-container  flex  items-stretch flex-wrap justify-center gap-y-10 gap-12 mt-6   ease-in-out">
             {skills.map((skill) => (
               <Animate classname={".skill"}>
-                <div className="skill  translate-y-[1000px] opacity-0 transition-[transform] duration-1000 delay-75 ease-in-out">
+                <div className="skill  scale-50 opacity-0 transition-all duration-1000 origin-center delay-75 ease-in-out">
                   <SkillCard
                     key={skill.id}
                     name={skill.name}
@@ -156,7 +156,7 @@ export const Home = () => {
           <Animate classname={".services-heading"}>
             <div
               data="SERVICES"
-              className="text-2xl small:text-4xl z-10 text-primary font-extrabold text-center main-heading services-heading  translate-y-[1000px] opacity-0  transition-[transform] duration-1000 delay-75 ease-in-out"
+              className="text-2xl small:text-4xl z-10 text-primary font-extrabold text-center main-heading services-heading  scale-50 opacity-0  transition-all duration-1000 origin-center delay-75 ease-in-out"
             >
               SERVICES
             </div>
@@ -165,7 +165,7 @@ export const Home = () => {
           <div className="services-container  flex  items-stretch flex-wrap justify-center gap-12 gap-x-20 mt-8">
             {services.map((service) => (
               <Animate classname={".service"}>
-                <div className="service  translate-y-[1000px] opacity-0  transition-[transform] duration-1000 delay-75 ease-in-out">
+                <div className="service  scale-50 opacity-0  transition-all duration-1000 origin-center delay-75 ease-in-out">
                   <ServiceCard
                     key={service.id}
                     name={service.name}
@@ -184,7 +184,7 @@ export const Home = () => {
           <Animate classname={".portfolio-heading"}>
             <div
               data="PORTFOLIO"
-              className="text-2xl small:text-4xl z-10 text-primary font-extrabold text-center main-heading portfolio-heading  translate-y-[1000px] opacity-0  transition-[transform] duration-1000 delay-75"
+              className="text-2xl small:text-4xl z-10 text-primary font-extrabold text-center main-heading portfolio-heading  scale-50 opacity-0  transition-all duration-1000 origin-center delay-75"
             >
               PORTFOLIO
             </div>
@@ -193,7 +193,7 @@ export const Home = () => {
           <div className="portfolio-container  flex  items-stretch flex-wrap justify-center gap-12 gap-x-20 mt-8">
             {portfolio.map((project) => (
               <Animate classname={".project"}>
-                <div className="project  translate-y-[1000px] opacity-0  transition-[transform] duration-1000 delay-75">
+                <div className="project  scale-50 opacity-0  transition-all duration-1000 origin-center delay-75">
                   <ProjectCard
                     key={project.id}
                     name={project.name}
@@ -213,13 +213,13 @@ export const Home = () => {
           <Animate classname={".contact-heading"}>
             <div
               data="CONTACT ME"
-              className="text-2xl small:text-4xl z-10 text-primary font-extrabold text-center main-heading contact-heading  translate-y-[1000px] opacity-0  transition-[transform] duration-1000 delay-75"
+              className="text-2xl small:text-4xl z-10 text-primary font-extrabold text-center main-heading contact-heading  scale-50 opacity-0  transition-all duration-1000 origin-center delay-75"
             >
               CONTACT ME
             </div>
           </Animate>
           <Animate classname={".contact-container"}>
-            <div className="contact-container w-full  flex  items-center flex-col md:flex-row justify-center gap-6  mt-8  translate-y-[1000px] opacity-0  transition-[transform] duration-1000 delay-75">
+            <div className="contact-container w-full  flex  items-center flex-col md:flex-row justify-center gap-6  mt-8  scale-50 opacity-0  transition-all duration-1000 origin-center delay-75">
               <ContactForm />
               <div className="contact-options flex-1 flex flex-col items-center gap-3 ">
                 <h1 className="text-[1.7rem]  lg:text-4xl z-10 text-primary font-extrabold ">

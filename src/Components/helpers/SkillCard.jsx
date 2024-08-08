@@ -2,7 +2,7 @@ import React from "react";
 export const SkillCard = ({ name, image }) => {
   return (
     <div
-      className="skill bg-bg1 rounded-full p-6 hover:scale-110 transition-all "
+      className="skill bg-bg1 rounded-full p-6  hover:scale-110 transition-all "
       data={name}
     >
       <img
