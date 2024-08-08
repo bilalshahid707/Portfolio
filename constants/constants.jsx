@@ -20,42 +20,42 @@ export const skills = [
   {
     id: 1,
     name: "JavaScript",
-    img: "/public/assets/skills/js.webp",
+    img: "/assets/skills/js.webp",
   },
   {
     id: 2,
     name: "React",
-    img: "/public/assets/skills/react.webp",
+    img: "/assets/skills/react.webp",
   },
   {
     id: 3,
     name: "Python",
-    img: "/public/assets/skills/python.webp",
+    img: "/assets/skills/python.webp",
   },
   {
     id: 4,
     name: "Html",
-    img: "/public/assets/skills/html.webp",
+    img: "/assets/skills/html.webp",
   },
   {
     id: 5,
     name: "CSS",
-    img: "/public/assets/skills/css-3.webp",
+    img: "/assets/skills/css-3.webp",
   },
   {
     id: 6,
     name: "Tailwind Css",
-    img: "/public/assets/skills/tailwind.webp",
+    img: "/assets/skills/tailwind.webp",
   },
   {
     id: 7,
     name: "MySql",
-    img: "/public/assets/skills/mysql.webp",
+    img: "/assets/skills/mysql.webp",
   },
   {
     id: 8,
     name: "Firebase",
-    img: "/public/assets/skills/firebase.webp",
+    img: "/assets/skills/firebase.webp",
   },
 ];
 
@@ -90,7 +90,7 @@ export const portfolio = [
         name: "Tailwind CSS",
       },
     ],
-    img: "/public/assets/portfolio/Screenshot_2024-08-03-12-34-41-856_com.android.chrome-edit.jpg",
+    img: "/assets/portfolio/Screenshot_2024-08-03-12-34-41-856_com.android.chrome-edit.jpg",
     link: "https://cinemate-009.netlify.app/",
   },
   {
@@ -106,7 +106,7 @@ export const portfolio = [
         name: "Tailwind CSS",
       },
     ],
-    img: "/public/assets/portfolio/Screenshot_2024-08-03-12-34-41-856_com.android.chrome-edit.jpg",
+    img: "/assets/portfolio/Screenshot_2024-08-03-12-34-41-856_com.android.chrome-edit.jpg",
     link: "https://cinemate-009.netlify.app/",
   },
 ];
