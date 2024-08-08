@@ -18,7 +18,7 @@ export const ProjectCard = ({ name, img, tags, link }) => {
 
       <div className="mt-8">
         <a href={link} target="_blank">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
             {name}
           </h5>
         </a>

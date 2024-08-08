@@ -57,7 +57,7 @@ export const Home = () => {
                 Front End Developer
               </h1>
             </div>
-            <div className="buttons flex mt-2 medium:mt-0 flex-col medium:flex-row gap-2 medium:gap-4 justify-center items-center">
+            <div className="buttons flex mt-2 medium:mt-0 flex-col items-start justify-start medium:flex-row gap-2 medium:gap-4 medium:justify-center medium:items-center">
               <Button
                 icon={
                   download ? (
