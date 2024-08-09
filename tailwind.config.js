@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         primary: ["Montserrat", "sans-serif"],
+        secondary: ["Fira Code", "monospace"],
       },
       fontSize: {
         heading: "3.75rem",
@@ -12,15 +13,15 @@ export default {
         tertiary: "2.25rem",
       },
       colors: {
-        primary: "#CBFE00",
-        secondary: "#ffffff",
-        lightblue: "#d9f4ff",
-        bg1: "#2A2A2A",
+        slate: "#8892B0",
+        white: "#ccd6f6",
+        green: "#64ffda",
+        bg1: "#112240",
         // bg2: "#2D343F",
         // dark1: "#001c22",
       },
       dropShadow: {
-        "3xl": "0 35px 35px rgba(255, 255, 255, 0.25)",
+        "2xl": "4px 4px 0px 0px rgba(100, 255, 218, 1)",
       },
       screens: {
         xssmall: "400px",

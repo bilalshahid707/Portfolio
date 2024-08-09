@@ -7,6 +7,7 @@ import {
   ProjectCard,
   Icon,
   ContactForm,
+  Header,
 } from "../../index";
 import {
   skills,
@@ -38,26 +39,43 @@ export const Home = () => {
 
   return (
     <>
-      <section className="hero bg-bg1 h-[90vh] bg-fixed ">
+      <section className="hero bg-bg1 h-screen">
+        <Header />
         <div
           className="container max-w-[90rem] mx-auto
-         flex p-6 px-3 items-center lg:-mt-0 justify-center h-full "
+         flex py-20 px-4 items-center small:p-10 md:p-32 lg:-mt-0 justify-start h-full relative"
         >
-          <div className="hero-content  flex lg:flex-1 -top-10 flex-col gap-1 small:gap-4 items-start small:items-center justify-center h-full ">
+          <div className="socials fixed gap-6 hidden md:flex flex-col items-center left-10 bottom-0">
+            {socials.map((social) => (
+              <Icon
+                key={social.id}
+                name={social.name}
+                socialLink={social.link}
+              />
+            ))}
+            <span className="h-36 w-[0.1rem] bg-slate"></span>
+          </div>
+          <div className="email fixed bottom-0 right-5 hidden md:flex flex-col items-center gap-32 text-slate">
+            <p className="rotate-90 text-sm hover:text-green hover:-translate-y-[5px] transition-all font-secondary">
+              bilalshahid187@gmail.com
+            </p>
+            <span className="h-36 w-[0.1rem] bg-slate"></span>
+          </div>
+          <div className="hero-content md:px-10 flex md:-mt-20 flex-col gap-1 small:gap-2 items-start  justify-center h-full ">
             <div className="">
-              <p className="text-[2rem] name   small:text-4xl lg:text-5xl xl:text-6xl text-secondary font-normal font-primary">
+              <p className="text-[2rem] name  text-green small:text-4xl lg:text-5xl xl:text-6xl text-secondary font-normal font-primary">
                 I am{" "}
-                <span className="text-primary block  name-span font-bold text-[2.5rem] leading-tight small:text-5xl lg:text-6xl xl:text-7xl">
+                <span className="text-white block  name-span font-bold text-[2.5rem] leading-tight small:text-5xl lg:text-6xl xl:text-7xl">
                   Muhammad Bilal
                 </span>
               </p>
             </div>
             <div className="role">
-              <h1 className="font-semibold text-secondary medium:-mt-2 text-[1.5rem] small:text-3xl lg:text-4xl xl:text-5xl">
+              <h1 className="font-semibold text-slate medium:-mt-2 text-[1.5rem] small:text-3xl lg:text-4xl xl:text-5xl">
                 Front End Developer
               </h1>
             </div>
-            <div className="buttons flex mt-2 medium:mt-0 flex-col items-start justify-start medium:flex-row gap-2 medium:gap-4 medium:justify-center medium:items-center">
+            <div className="buttons flex mt-2 flex-col items-start justify-start small:flex-row gap-2 medium:gap-4 medium:justify-center medium:items-center">
               <Button
                 icon={
                   download ? (
@@ -95,7 +113,7 @@ export const Home = () => {
                 filled={true}
                 handleClick={downloadCv}
               >
-                Download Cv
+                Resume
               </Button>
               <Button href="#contact">Get in touch</Button>
             </div>
@@ -231,7 +249,7 @@ export const Home = () => {
                 <p className="text-sm lg:text-sm text-secondary">
                   or visit my socials
                 </p>
-                <div className="socials flex gap-4">
+                <div className="socials flex gap-4 md:hidden">
                   {socials.map((social) => (
                     <Icon
                       key={social.id}

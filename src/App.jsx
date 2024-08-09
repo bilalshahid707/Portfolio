@@ -31,7 +31,6 @@ function App() {
     return (
       <main>
         <ToastContainer limit={2} />
-        <Header />
         <Allroutes />
         <Footer />
       </main>

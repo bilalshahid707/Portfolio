@@ -9,20 +9,20 @@ export const Hamburger = ({ openNav, handleClick }) => {
           openNav ? "rotate-45 delay-150" : ""
         } transition-all absolute w-12 h-12 inline-flex  gap-1 items-center justify-center md:hidden aria-expanded:true`}
       >
-        <div className="div-1 flex flex-col gap-1 items-center justify-center">
+        <div className="div-1 flex flex-col gap-1 items-start justify-center">
           <span
-            className={`block w-8 h-[2px] bg-primary ${
-              openNav ? "bg-bg1 opacity-0 " : ""
+            className={`block w-8 h-[3px] rounded-lg bg-green ${
+              openNav ? " opacity-0 " : ""
             } transition-all duration-500 ease-in-out`}
           ></span>
           <span
-            className={`block w-8 h-[2px]  ${
-              openNav ? "bg-bg1" : "bg-primary"
+            className={`block  h-[3px] rounded-lg  ${
+              openNav ? "bg-green w-8" : "bg-green w-6"
             } `}
           ></span>
           <span
-            className={`block w-8 h-[2px] bg-primary ${
-              openNav ? "bg-bg1 opacity-0" : ""
+            className={`block w-8 h-[3px] rounded-lg bg-green ${
+              openNav ? " opacity-0" : ""
             } transition-all duration-500 ease-in-out`}
           ></span>
         </div>
@@ -32,9 +32,7 @@ export const Hamburger = ({ openNav, handleClick }) => {
           } transition-all`}
         >
           <span
-            className={`block w-8 h-[2px] bg-bg1 ${
-              openNav ? "bg-bg1" : ""
-            } transition-all`}
+            className={`block w-8 h-[3px] rounded-lg bg-green  transition-all`}
           ></span>
         </div>
       </button>
