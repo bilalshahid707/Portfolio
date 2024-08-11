@@ -49,7 +49,7 @@ export const ContactForm = () => {
   return (
     <form
       action=""
-      className="contact-form flex flex-1 flex-col gap-3 w-full bg-bg1  "
+      className="contact-form flex flex-1 flex-col gap-3 w-full  "
       onSubmit={sendEmail}
       ref={Contactform}
       name="form"
@@ -58,7 +58,7 @@ export const ContactForm = () => {
         <input
           type="name"
           placeholder="Name"
-          className="p-4 bg-black text-white font-primary w-full h-full outline-none border-none rounded-md"
+          className="p-4 bg-lightestnavy text-white font-primary w-full h-full outline-none border-none rounded-md"
           name="from_name"
           required
         />
@@ -67,7 +67,7 @@ export const ContactForm = () => {
         <input
           type="email"
           placeholder="Email"
-          className="p-4 bg-black text-white  font-primary w-full h-full outline-none border-none rounded-md"
+          className="p-4 bg-lightestnavy text-white  font-primary w-full h-full outline-none border-none rounded-md"
           name="reply_to"
           required
         />
@@ -76,7 +76,7 @@ export const ContactForm = () => {
         <input
           type="alphanumeric"
           placeholder="Phone"
-          className="p-4 bg-black text-white font-primary w-full h-full outline-none border-none rounded-md"
+          className="p-4 bg-lightestnavy text-white font-primary w-full h-full outline-none border-none rounded-md"
           name="phone"
           required
         />
@@ -85,7 +85,7 @@ export const ContactForm = () => {
         <textarea
           type="text"
           placeholder="Message"
-          className="p-4 bg-black text-white font-primary w-full h-full outline-none border-none rounded-md"
+          className="p-4 bg-lightestnavy text-white font-primary w-full h-full outline-none border-none rounded-md"
           name="message"
           required
         />
@@ -94,13 +94,13 @@ export const ContactForm = () => {
         <button
           type="submit"
           disabled={sendMsg}
-          className="p-2 cursor-pointer border-2  border-bg1 bg-primary font-primary w-full h-full  rounded-md text-bg1 font-medium"
+          className="p-2 cursor-pointer bg-green font-primary w-full h-full  rounded-md text-navy font-medium"
         >
           {sendMsg ? (
             <svg
               aria-hidden="true"
               role="status"
-              className="inline w-5 h-5  text-white animate-spin"
+              className="inline w-5 h-5  text-green animate-spin"
               viewBox="0 0 100 100"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

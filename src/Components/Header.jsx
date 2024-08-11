@@ -8,16 +8,18 @@ export const Header = () => {
     console.log(openNav);
   };
   return (
-    <header className={`h-20  bg-bg1`}>
-      <div className="container max-w-7xl mx-auto h-full p-4 font-primary  text-white  md:flex justify-center items-center">
+    <header
+      className={`h-20  bg-[rgba(10, 25, 47, 0.85)] backdrop-blur-md fixed top-0 z-50 `}
+    >
+      <div className="container max-w-7xl mx-auto h-full p-4 font-primary  text-white  md:flex justify-center items-center ">
         <nav className={`navigation md:block md:w-auto`}>
           <Hamburger openNav={openNav} handleClick={handleClick} />
           <ul
-            className={`navitems z-10 text-md absolute font-secondary font-normal  left-0 w-full flex flex-col overflow-hidden md:p-0 p-8 pb-4 ${
+            className={`navitems z-10 text-md absolute font-secondary font-normal left-0 w-full flex flex-col overflow-hidden md:p-0 p-8 pb-4 ${
               openNav
-                ? "h-72 top-0 bg-bg1 text-slate"
+                ? "h-72 top-0  bg-bg1 text-slate"
                 : "h-0 top-0  -translate-y-96"
-            } md:transform-none md:overflow-visible md:top-10 md:flex md:flex-row items-center justify-center transition-all duration-[1s] ease-out`}
+            } md:transform-none md:overflow-visible md:top-10  md:flex md:flex-row items-center justify-center transition-all duration-[1s] ease-out`}
           >
             <li
               onClick={() => {

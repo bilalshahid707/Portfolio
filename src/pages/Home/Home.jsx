@@ -39,12 +39,12 @@ export const Home = () => {
 
   return (
     <>
-      <section className="hero bg-bg1 h-screen">
-        <Header />
+      <section className="hero bg-navy h-screen">
         <div
           className="container max-w-[90rem] mx-auto
-         flex py-20 px-4 items-center small:p-10 md:p-32 lg:-mt-0 justify-start h-full relative"
+         flex pt-20 px-4  items-center small:p-10 md:p-32  md:pb-0 justify-start h-full  relative"
         >
+          {/* SOCIALS */}
           <div className="socials fixed gap-6 hidden md:flex flex-col items-center left-10 bottom-0">
             {socials.map((social) => (
               <Icon
@@ -55,15 +55,18 @@ export const Home = () => {
             ))}
             <span className="h-36 w-[0.1rem] bg-slate"></span>
           </div>
+          {/* EMAIL */}
           <div className="email fixed bottom-0 right-5 hidden md:flex flex-col items-center gap-32 text-slate">
             <p className="rotate-90 text-sm hover:text-green hover:-translate-y-[5px] transition-all font-secondary">
               bilalshahid187@gmail.com
             </p>
             <span className="h-36 w-[0.1rem] bg-slate"></span>
           </div>
-          <div className="hero-content md:px-10 flex md:-mt-20 flex-col gap-1 small:gap-2 items-start  justify-center h-full ">
-            <div className="">
-              <p className="text-[2rem] name  text-green small:text-4xl lg:text-5xl xl:text-6xl text-secondary font-normal font-primary">
+
+          {/* HERO CONTENT */}
+          <div className="hero-content md:px-10 flex md:-mt-20 flex-col gap-1 small:gap-2 items-start  justify-center h-full">
+            <div>
+              <p className="text-[2rem] name  text-green small:text-4xl lg:text-5xl xl:text-6xl text-secondary font-normal font-primary hero-heading ">
                 I am{" "}
                 <span className="text-white block  name-span font-bold text-[2.5rem] leading-tight small:text-5xl lg:text-6xl xl:text-7xl">
                   Muhammad Bilal
@@ -71,7 +74,7 @@ export const Home = () => {
               </p>
             </div>
             <div className="role">
-              <h1 className="font-semibold text-slate medium:-mt-2 text-[1.5rem] small:text-3xl lg:text-4xl xl:text-5xl">
+              <h1 className="font-semibold text-slate medium:-mt-2 text-3xl lg:text-5xl xl:text-6xl">
                 Front End Developer
               </h1>
             </div>
@@ -121,135 +124,136 @@ export const Home = () => {
         </div>
       </section>
 
-      <section id="about" className="aboutme bg-black ">
-        <div className="container max-w-[90rem] mx-auto px-4 py-12 medium:p-20 pt-10 flex  flex-col gap-6">
-          <Animate classname=".about-heading">
-            <div
-              data="ABOUT ME"
-              className="text-2xl small:text-4xl z-10 text-primary  scale-50 opacity-0  font-extrabold about-heading transition-all duration-1000 origin-center delay-75 text-center  main-heading"
-            >
-              ABOUT ME
-            </div>
-          </Animate>
+      <section id="about" className="aboutme bg-navy ">
+        <div className="container max-w-[90rem] mx-auto pt-20 px-4 small:p-10 md:p-32 md:pb-0 flex  flex-col gap-6 ">
+          <div className="about-content flex flex-col md:px-10 text-white  gap-10">
+            <Animate classname=".about-heading">
+              <div
+                data="ABOUT ME"
+                className="text-2xl small:text-4xl text-primary  translate-y-full opacity-0 font-semibold  about-heading transition-all duration-1000 origin-center delay-75 text-left relative"
+              >
+                <span className="text-green text-2xl font-secondary">01.</span>{" "}
+                About Me
+                <span className="w-1/2 h-[0.1rem] top-1/2 left-[28%] bg-lightestnavy absolute "></span>
+              </div>
+            </Animate>
+            <Animate classname={".intro"}>
+              <p className="intro text-secondary  translate-y-full opacity-0  transition-all duration-1000 origin-center delay-75 ease-in-out text-left text-base medium:text-xl text-slate">
+                I'm currently pursuing my Bachelor's degree at the University of
+                Engineering and Technology. I'm an aspiring{" "}
+                <span className="text-green">MERN stack developer</span>
+                with a solid background in front-end technologies like{" "}
+                <span className="text-green">
+                  HTML, CSS, JavaScript, and React.js.
+                </span>{" "}
+                I'm also diving into backend technologies to round out my
+                skills. On the side, I have a keen interest in{" "}
+                <span className="text-green">
+                  AI/ML and blockchain technology.
+                </span>
+              </p>
+            </Animate>
+          </div>
+          <div className="skills flex flex-col items-start justify-start md:px-10 gap-5">
+            <Animate classname={".about-heading-3"}>
+              <div className="heading about-heading-3 text-secondary text-2xl small:text-3xl  text-white font-bold  mt-6  translate-y-full opacity-0  transition-all duration-1000 origin-center delay-75 ease-in-out text-left">
+                What I’m Good At
+              </div>
+            </Animate>
 
-          <Animate classname={".about-heading-2"}>
-            <div className="heading text-primary text-2xl  opacity-0  scale-50 transition-all duration-1000 origin-center delay-75 ease-in-out small:text-3xl text-center font-bold mt-6 about-heading-2">
-              <span className="text-secondary"> Meet</span> Muhammad Bilal
+            <div className="skills-container items-center justify-center flex-wrap flex gap-y-10 gap-12 mt-6   ease-in-out relative">
+              {skills.map((skill) => (
+                <Animate classname={".skill"}>
+                  <div className="skill  translate-y-full opacity-0 inline-block transition-all duration-1000 origin-center delay-75 ease-in-out">
+                    <SkillCard
+                      key={skill.id}
+                      name={skill.name}
+                      image={skill.img}
+                    />
+                  </div>
+                </Animate>
+              ))}
             </div>
-          </Animate>
-          <Animate classname={".intro"}>
-            <p className="intro text-secondary  scale-50 opacity-0  transition-all duration-1000 origin-center delay-75 ease-in-out text-center text-base medium:text-xl">
-              I'm currently pursuing my Bachelor's degree at the University of
-              Engineering and Technology. I'm an aspiring MERN stack developer
-              with a solid background in front-end technologies like HTML, CSS,
-              JavaScript, and React.js. I'm also diving into backend
-              technologies to round out my skills. On the side, I have a keen
-              interest in AI/ML and blockchain technology.
-            </p>
-          </Animate>
-          <Animate classname={".about-heading-3"}>
-            <div className="heading about-heading-3 text-secondary text-2xl small:text-3xl  text-center font-bold  mt-6  scale-50 opacity-0  transition-all duration-1000 origin-center delay-75 ease-in-out ">
-              What I’m Good At
-            </div>
-          </Animate>
-
-          <div className="skills-container  flex  items-stretch flex-wrap justify-center gap-y-10 gap-12 mt-6   ease-in-out">
-            {skills.map((skill) => (
-              <Animate classname={".skill"}>
-                <div className="skill  scale-50 opacity-0 transition-all duration-1000 origin-center delay-75 ease-in-out">
-                  <SkillCard
-                    key={skill.id}
-                    name={skill.name}
-                    image={skill.img}
-                  />
-                </div>
-              </Animate>
-            ))}
           </div>
         </div>
       </section>
 
-      <section id="services" className="services bg-bg1">
-        <div className="container max-w-[90rem] mx-auto px-8 py-12 medium:p-20 pt-10 flex  flex-col gap-6">
-          <Animate classname={".services-heading"}>
-            <div
-              data="SERVICES"
-              className="text-2xl small:text-4xl z-10 text-primary font-extrabold text-center main-heading services-heading  scale-50 opacity-0  transition-all duration-1000 origin-center delay-75 ease-in-out"
-            >
-              SERVICES
-            </div>
-          </Animate>
+      <section id="services" className="services bg-navy">
+        <div className="container max-w-[90rem] mx-auto pt-20 px-4 small:p-10 md:p-32 md:pb-0 ">
+          <div className="services-content md:px-10 flex  flex-col gap-10">
+            <Animate classname={".services-heading"}>
+              <div className="services-heading text-2xl small:text-4xl z-10 text-primary  translate-y-full opacity-0 font-semibold transition-all duration-1000 origin-center delay-75 text-left text-white relative">
+                <span className="text-green text-2xl font-secondary ">02.</span>{" "}
+                Services
+                <span className="w-1/2 h-[0.1rem] top-1/2 left-[22%] bg-lightestnavy absolute "></span>
+              </div>
+            </Animate>
 
-          <div className="services-container  flex  items-stretch flex-wrap justify-center gap-12 gap-x-20 mt-8">
-            {services.map((service) => (
-              <Animate classname={".service"}>
-                <div className="service  scale-50 opacity-0  transition-all duration-1000 origin-center delay-75 ease-in-out">
-                  <ServiceCard
-                    key={service.id}
-                    name={service.name}
-                    icon={service.icon}
-                    description={service.description}
-                  />
-                </div>
-              </Animate>
-            ))}
+            <div className="services-container  flex  items-stretch flex-wrap justify-center gap-12 gap-x-20 mt-8">
+              {services.map((service) => (
+                <Animate classname={".service"}>
+                  <div className="service  translate-y-full opacity-0  transition-all duration-1000 origin-center delay-75 ease-in-out">
+                    <ServiceCard
+                      key={service.id}
+                      name={service.name}
+                      icon={service.icon}
+                      description={service.description}
+                    />
+                  </div>
+                </Animate>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="portfolio" className="portfolio bg-black">
-        <div className="container max-w-[90rem] mx-auto px-4 py-12 medium:p-20 pt-10 flex  flex-col gap-6">
-          <Animate classname={".portfolio-heading"}>
-            <div
-              data="PORTFOLIO"
-              className="text-2xl small:text-4xl z-10 text-primary font-extrabold text-center main-heading portfolio-heading  scale-50 opacity-0  transition-all duration-1000 origin-center delay-75"
-            >
-              PORTFOLIO
-            </div>
-          </Animate>
+      <section id="portfolio" className="portfolio bg-navy">
+        <div className="container max-w-[90rem] mx-auto pt-20 px-4 small:p-10 md:p-32 md:pb-0">
+          <div className="portfolio-content px-10 flex  flex-col gap-10">
+            <Animate classname={".portfolio-heading"}>
+              <div className="portfolio-heading text-2xl small:text-4xl z-10 text-primary  translate-y-full opacity-0 font-semibold transition-all duration-1000 origin-center delay-75 text-left text-white relative">
+                <span className="text-green text-2xl font-secondary ">03.</span>{" "}
+                PORTFOLIO
+                <span className="w-1/2 h-[0.1rem] top-1/2 left-[28%] bg-lightestnavy absolute "></span>
+              </div>
+            </Animate>
 
-          <div className="portfolio-container  flex  items-stretch flex-wrap justify-center gap-12 gap-x-20 mt-8">
-            {portfolio.map((project) => (
-              <Animate classname={".project"}>
-                <div className="project  scale-50 opacity-0  transition-all duration-1000 origin-center delay-75">
-                  <ProjectCard
-                    key={project.id}
-                    name={project.name}
-                    img={project.img}
-                    tags={project.tags}
-                    link={project.link}
-                  />
-                </div>
-              </Animate>
-            ))}
+            <div className="portfolio-container  flex  items-stretch flex-wrap justify-center gap-12 gap-x-20 mt-8">
+              {portfolio.map((project) => (
+                <Animate classname={".project"}>
+                  <div className="project  translate-y-full opacity-0  transition-all duration-1000 origin-center delay-75">
+                    <ProjectCard
+                      key={project.id}
+                      name={project.name}
+                      img={project.img}
+                      tags={project.tags}
+                      link={project.link}
+                    />
+                  </div>
+                </Animate>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="contact" className="contact bg-bg1">
-        <div className="container max-w-[90rem] mx-auto px-4 py-12 medium:p-20 pt-10 flex  flex-col gap-6">
+      <section id="contact" className="contact bg-navy">
+        <div className="container max-w-[90rem] mx-auto py-20 px-4 small:p-10 md:p-32 flex  flex-col gap-6">
           <Animate classname={".contact-heading"}>
-            <div
-              data="CONTACT ME"
-              className="text-2xl small:text-4xl z-10 text-primary font-extrabold text-center main-heading contact-heading  scale-50 opacity-0  transition-all duration-1000 origin-center delay-75"
-            >
-              CONTACT ME
+            <div className="contact-heading text-2xl small:text-4xl z-10 text-primary  translate-y-full opacity-0 font-semibold transition-all duration-1000 origin-center delay-75 text-left text-white relative">
+              <span className="text-green text-2xl font-secondary">04.</span>{" "}
+              Get in Touch
+              <span className="w-1/2 h-[0.1rem] top-1/2 left-[28%] bg-lightestnavy absolute "></span>
             </div>
           </Animate>
           <Animate classname={".contact-container"}>
-            <div className="contact-container w-full  flex  items-center flex-col md:flex-row justify-center gap-6  mt-8  scale-50 opacity-0  transition-all duration-1000 origin-center delay-75">
+            <div className="contact-container w-full md:w-[80%] mx-auto  flex  items-center flex-col  gap-6  mt-8  translate-y-full opacity-0  transition-all duration-1000 origin-center delay-75">
               <ContactForm />
-              <div className="contact-options flex-1 flex flex-col items-center gap-3 ">
-                <h1 className="text-[1.7rem]  lg:text-4xl z-10 text-primary font-extrabold ">
-                  Reach out to me on
-                </h1>
-                <p className="text-base lg:text-xl text-secondary">
-                  bilalshahid187@gmail.com
-                </p>
-                <p className="text-sm lg:text-sm text-secondary">
+              <div className="socials  gap-6  md:hidden flex flex-col  items-center">
+                <p className="text-green text-lg text-center">
                   or visit my socials
                 </p>
-                <div className="socials flex gap-4 md:hidden">
+                <div className="icons flex gap-6">
                   {socials.map((social) => (
                     <Icon
                       key={social.id}

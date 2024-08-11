@@ -3,19 +3,48 @@
 @tailwind components;
 @tailwind utilities;
 
+/* VARIABLES */
 :root {
-  --background: #2A2A2A;
-  --primary: #CBFE00;
-  --seconadry: #ffffff;
+  --slate: #8892B0;
+  --lightestnavy: #233554;
+  --navy: #0a192f;
+  --lightnavy: #112240;
+  --white: #ccd6f6;
+  --green: #64ffda;
+  --bg1: #112240;
 }
 
+/* HTML AND BODY SETTINGS */
 html,
 body {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
 }
 
 
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--navy);
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--slate);
+}
+
+
+/* HEADER */
+header {
+  width: calc(100vw - 12px);
+}
+
+
+/* MAIN */
 main {
   height: 100vh;
   width: 100%;
@@ -28,69 +57,49 @@ main::after {
   height: 100%;
   width: 100%;
   content: "";
-  background-color: var(--primary);
+  background-color: var(--green);
   z-index: 10;
   top: 0;
   left: 0;
-  animation: loader 1s ease-in-out forwards;
+  animation: start 1s ease-in-out forwards;
 
 }
 
-section {
-  overflow: hidden;
-}
-
-.neon-text {
-  font-family: "Playwrite CU", cursive;
-}
-
-.hero {
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  content: "";
-  background-color: var(--background);
-  z-index: 1;
-  top: 0;
-  left: 0;
-  animation: loader 1s ease-in-out forwards;
-
-}
-
-@keyframes loader {
+@keyframes start {
   100% {
     height: 0;
   }
 }
 
+
+/* SECTION */
+section {
+  overflow: hidden;
+}
+
+
+/* HERO */
 .hero-content {
+  transform: translateY(100%);
+  opacity: 0;
   animation: hero 1s ease-in-out forwards;
 }
 
 @keyframes hero {
-  0% {
-    opacity: 0;
-    transform: scale(0.75);
-  }
-
   100% {
+    transform: none;
     opacity: 100%;
-    transform: scale(1);
   }
 }
 
-.nav-item a {
-  transition: all 0.3s;
-  position: relative;
-  animation: main 0.5s linear;
+.socials,
+.email {
+  transform: translateY(200%);
+  animation: hero 1s ease-in-out forwards;
+  animation-delay: 0.3s;
 }
 
-
+/* SKILLS */
 .skill {
   position: relative;
   display: flex;
@@ -101,7 +110,7 @@ section {
 .skill::before {
   position: absolute;
   content: attr(data);
-  color: var(--primary);
+  color: var(--green);
   top: -1.5rem;
   text-align: center;
   visibility: hidden;
@@ -113,66 +122,3 @@ section {
 .skill:hover::before {
   visibility: visible;
 }
-
-.main-heading {
-  position: relative;
-}
-
-.main-heading::before {
-  content: attr(data);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  font-size: 5rem;
-  text-align: center;
-  top: 0;
-  left: 0;
-  color: var(--seconadry);
-  z-index: -1;
-  opacity: 20%;
-}
-
-@media (max-width:750px) {
-  .main-heading::before {
-    font-size: 3.5rem;
-  }
-}
-
-@media (max-width:550px) {
-  .main-heading::before {
-    font-size: 3rem;
-  }
-}
-
-
-@media (max-width:360px) {
-  .main-heading::before {
-    font-size: 2.3rem;
-  }
-}
-
-.project-img::before {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 100%;
-  background-color: var(--primary);
-  transform: translate(20px, 20px);
-  z-index: -1;
-  top: 0;
-  left: 0;
-  transition: all 0.3s;
-}
-
-.project-img:hover::before {
-  transform: translate(15px, 15px);
-}
-
-.project-img:hover a {
-  display: block;
-}
-
-/* .loader-container1 {
-  animation: loader 3s ease-in-out 1s linear;
-  transform: translateY(100%);
-} */

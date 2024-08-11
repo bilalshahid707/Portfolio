@@ -90,7 +90,7 @@ export const portfolio = [
         name: "Tailwind CSS",
       },
     ],
-    img: "/assets/portfolio/Screenshot_2024-08-03-12-34-41-856_com.android.chrome-edit.jpg",
+    img: "assets/portfolio/testing2.png",
     link: "https://cinemate-009.netlify.app/",
   },
   {
@@ -106,7 +106,7 @@ export const portfolio = [
         name: "Tailwind CSS",
       },
     ],
-    img: "/assets/portfolio/Screenshot_2024-08-03-12-34-41-856_com.android.chrome-edit.jpg",
+    img: "assets/portfolio/testing2.png",
     link: "https://cinemate-009.netlify.app/",
   },
 ];

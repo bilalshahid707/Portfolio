@@ -16,11 +16,11 @@ function App() {
   });
   if (loading) {
     return (
-      <div className="bg-primary h-screen loader-container flex items-center justify-center">
+      <div className="bg-green h-screen loader-container flex items-center justify-center">
         <div className="loader">
           <ReactLoading
             type="bars"
-            color={"#2a2a2a"}
+            color={"#0a192f"}
             height={100}
             width={100}
           />
@@ -31,6 +31,7 @@ function App() {
     return (
       <main>
         <ToastContainer limit={2} />
+        <Header />
         <Allroutes />
         <Footer />
       </main>

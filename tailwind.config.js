@@ -14,6 +14,9 @@ export default {
       },
       colors: {
         slate: "#8892B0",
+        lightestnavy: "#233554",
+        navy: "#0a192f",
+        lightnavy: "#112240",
         white: "#ccd6f6",
         green: "#64ffda",
         bg1: "#112240",
