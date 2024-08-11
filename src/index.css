@@ -12,6 +12,7 @@
   --white: #ccd6f6;
   --green: #64ffda;
   --bg1: #112240;
+  --toastify-icon-color-success: var(--green)
 }
 
 /* HTML AND BODY SETTINGS */
@@ -121,4 +122,21 @@ section {
 
 .skill:hover::before {
   visibility: visible;
+}
+
+.Toastify__progress-bar {
+  background-color: #64ffda;
+}
+
+.Toastify__toast-theme--dark {
+  background-color: var(--lightestnavy);
+  color: var(--green);
+}
+
+.Toastify__close-button {
+  color: var(--green);
+}
+
+.Toastify__progress-bar--success {
+  background-color: var(--green);
 }

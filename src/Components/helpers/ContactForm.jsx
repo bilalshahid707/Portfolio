@@ -49,7 +49,7 @@ export const ContactForm = () => {
   return (
     <form
       action=""
-      className="contact-form flex flex-1 flex-col gap-3 w-full  "
+      className="contact-form flex flex-col gap-3 w-full  "
       onSubmit={sendEmail}
       ref={Contactform}
       name="form"

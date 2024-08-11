@@ -128,17 +128,14 @@ export const Home = () => {
         <div className="container max-w-[90rem] mx-auto pt-20 px-4 small:p-10 md:p-32 md:pb-0 flex  flex-col gap-6 ">
           <div className="about-content flex flex-col md:px-10 text-white  gap-10">
             <Animate classname=".about-heading">
-              <div
-                data="ABOUT ME"
-                className="text-2xl small:text-4xl text-primary  translate-y-full opacity-0 font-semibold  about-heading transition-all duration-1000 origin-center delay-75 text-left relative"
-              >
+              <div className="text-2xl small:text-4xl text-primary  translate-y-full opacity-0 font-semibold  about-heading transition-all duration-1000  delay-75 text-left flex items-center gap-4">
                 <span className="text-green text-2xl font-secondary">01.</span>{" "}
                 About Me
-                <span className="w-1/2 h-[0.1rem] top-1/2 left-[28%] bg-lightestnavy absolute "></span>
+                <span className="w-1/4 h-[0.1rem]  bg-lightestnavy "></span>
               </div>
             </Animate>
             <Animate classname={".intro"}>
-              <p className="intro text-secondary  translate-y-full opacity-0  transition-all duration-1000 origin-center delay-75 ease-in-out text-left text-base medium:text-xl text-slate">
+              <p className="intro text-secondary  translate-y-full opacity-0  transition-all duration-1000  delay-75 ease-in-out text-left text-base medium:text-xl text-slate">
                 I'm currently pursuing my Bachelor's degree at the University of
                 Engineering and Technology. I'm an aspiring{" "}
                 <span className="text-green">MERN stack developer</span>
@@ -156,7 +153,7 @@ export const Home = () => {
           </div>
           <div className="skills flex flex-col items-start justify-start md:px-10 gap-5">
             <Animate classname={".about-heading-3"}>
-              <div className="heading about-heading-3 text-secondary text-2xl small:text-3xl  text-white font-bold  mt-6  translate-y-full opacity-0  transition-all duration-1000 origin-center delay-75 ease-in-out text-left">
+              <div className="heading about-heading-3 text-secondary text-2xl small:text-3xl  text-white font-bold  mt-6  translate-y-full opacity-0  transition-all duration-1000  delay-75 ease-in-out text-left">
                 What I’m Good At
               </div>
             </Animate>
@@ -164,7 +161,7 @@ export const Home = () => {
             <div className="skills-container items-center justify-center flex-wrap flex gap-y-10 gap-12 mt-6   ease-in-out relative">
               {skills.map((skill) => (
                 <Animate classname={".skill"}>
-                  <div className="skill  translate-y-full opacity-0 inline-block transition-all duration-1000 origin-center delay-75 ease-in-out">
+                  <div className="skill  translate-y-full opacity-0 inline-block transition-all duration-1000  delay-75 ease-in-out">
                     <SkillCard
                       key={skill.id}
                       name={skill.name}
@@ -182,17 +179,17 @@ export const Home = () => {
         <div className="container max-w-[90rem] mx-auto pt-20 px-4 small:p-10 md:p-32 md:pb-0 ">
           <div className="services-content md:px-10 flex  flex-col gap-10">
             <Animate classname={".services-heading"}>
-              <div className="services-heading text-2xl small:text-4xl z-10 text-primary  translate-y-full opacity-0 font-semibold transition-all duration-1000 origin-center delay-75 text-left text-white relative">
+              <div className="services-heading text-2xl small:text-4xl z-10 text-primary  translate-y-full opacity-0 font-semibold transition-all duration-1000  delay-75 text-left text-white flex items-center gap-4">
                 <span className="text-green text-2xl font-secondary ">02.</span>{" "}
                 Services
-                <span className="w-1/2 h-[0.1rem] top-1/2 left-[22%] bg-lightestnavy absolute "></span>
+                <span className="w-1/4 h-[0.1rem] bg-lightestnavy "></span>
               </div>
             </Animate>
 
             <div className="services-container  flex  items-stretch flex-wrap justify-center gap-12 gap-x-20 mt-8">
               {services.map((service) => (
                 <Animate classname={".service"}>
-                  <div className="service  translate-y-full opacity-0  transition-all duration-1000 origin-center delay-75 ease-in-out">
+                  <div className="service  translate-y-full opacity-0  transition-all duration-1000  delay-75 ease-in-out">
                     <ServiceCard
                       key={service.id}
                       name={service.name}
@@ -209,19 +206,19 @@ export const Home = () => {
 
       <section id="portfolio" className="portfolio bg-navy">
         <div className="container max-w-[90rem] mx-auto pt-20 px-4 small:p-10 md:p-32 md:pb-0">
-          <div className="portfolio-content px-10 flex  flex-col gap-10">
+          <div className="portfolio-content md:px-10 flex  flex-col gap-10">
             <Animate classname={".portfolio-heading"}>
-              <div className="portfolio-heading text-2xl small:text-4xl z-10 text-primary  translate-y-full opacity-0 font-semibold transition-all duration-1000 origin-center delay-75 text-left text-white relative">
+              <div className="portfolio-heading text-2xl small:text-4xl z-10 text-primary  translate-y-full opacity-0 font-semibold transition-all duration-1000  delay-75 text-left text-white flex items-center gap-4">
                 <span className="text-green text-2xl font-secondary ">03.</span>{" "}
                 PORTFOLIO
-                <span className="w-1/2 h-[0.1rem] top-1/2 left-[28%] bg-lightestnavy absolute "></span>
+                <span className="w-1/4 h-[0.1rem]  bg-lightestnavy "></span>
               </div>
             </Animate>
 
             <div className="portfolio-container  flex  items-stretch flex-wrap justify-center gap-12 gap-x-20 mt-8">
               {portfolio.map((project) => (
                 <Animate classname={".project"}>
-                  <div className="project  translate-y-full opacity-0  transition-all duration-1000 origin-center delay-75">
+                  <div className="project  translate-y-full opacity-0  transition-all duration-1000  delay-75">
                     <ProjectCard
                       key={project.id}
                       name={project.name}
@@ -238,16 +235,14 @@ export const Home = () => {
       </section>
 
       <section id="contact" className="contact bg-navy">
-        <div className="container max-w-[90rem] mx-auto py-20 px-4 small:p-10 md:p-32 flex  flex-col gap-6">
+        <div className="container max-w-[90rem] mx-auto py-20 px-4 small:p-10 md:p-32 flex justify-center flex-col gap-6">
           <Animate classname={".contact-heading"}>
-            <div className="contact-heading text-2xl small:text-4xl z-10 text-primary  translate-y-full opacity-0 font-semibold transition-all duration-1000 origin-center delay-75 text-left text-white relative">
-              <span className="text-green text-2xl font-secondary">04.</span>{" "}
+            <div className="contact-heading text-3xl small:text-5xl z-10 text-primary  translate-y-full opacity-0 font-semibold transition-all duration-1000  delay-75  text-white">
               Get in Touch
-              <span className="w-1/2 h-[0.1rem] top-1/2 left-[28%] bg-lightestnavy absolute "></span>
             </div>
           </Animate>
           <Animate classname={".contact-container"}>
-            <div className="contact-container w-full md:w-[80%] mx-auto  flex  items-center flex-col  gap-6  mt-8  translate-y-full opacity-0  transition-all duration-1000 origin-center delay-75">
+            <div className="contact-container w-full md:w-[50%]   flex  items-center flex-col  gap-6  mt-8  translate-y-full opacity-0  transition-all duration-1000  delay-75">
               <ContactForm />
               <div className="socials  gap-6  md:hidden flex flex-col  items-center">
                 <p className="text-green text-lg text-center">
