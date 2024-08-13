@@ -2,15 +2,18 @@ import React from "react";
 
 export const ProjectCard = ({ name, img, tags, link }) => {
   return (
-    <div className={` flex flex-col h-max bg-lightnavy p-5 rounded-md`}>
+    <div className={` flex flex-col w-[90%] md:w-full mx-auto`}>
       <div
-        className={`max-w-md w-60 flex-1 z-10 transition-all cursor-pointer rounded-lg project-img `}
+        className={`max-w-sm w-full  z-10 transition-all cursor-pointer   project-img relative  shadow-[10px_10px_0px_0_rgba(100,255,218,1)] hover:shadow-[6px_6px_0px_0_rgba(100,255,218,1)]`}
       >
         <img
           src={img}
           alt="Cinemate"
-          className="w-full aspect-video object-cover"
+          className="w-full aspect-video object-cover "
         />
+        <a href={link} target="_blank">
+          <i className=" project-icon bi bi-box-arrow-up-right text-green absolute  top-2 right-2 p-3  md:hidden  transition-all bg-navy rounded-full flex"></i>
+        </a>
       </div>
 
       <div className="mt-8">

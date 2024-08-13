@@ -26,7 +26,7 @@ body {
 
 /* SCROLLBAR */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 1vw;
 }
 
 ::-webkit-scrollbar-track {
@@ -41,7 +41,7 @@ body {
 
 /* HEADER */
 header {
-  width: calc(100vw - 12px);
+  width: 99vw;
 }
 
 
@@ -139,4 +139,8 @@ section {
 
 .Toastify__progress-bar--success {
   background-color: var(--green);
+}
+
+.project-img:hover .project-icon {
+  display: flex;
 }

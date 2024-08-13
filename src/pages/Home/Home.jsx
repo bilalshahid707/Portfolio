@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Animate } from "../../Components/helpers/Animate";
 import {
   Button,
@@ -7,7 +7,6 @@ import {
   ProjectCard,
   Icon,
   ContactForm,
-  Header,
 } from "../../index";
 import {
   skills,
@@ -16,6 +15,7 @@ import {
   socials,
 } from "../../../constants/constants";
 export const Home = () => {
+  // DOWNLOAD CV
   const [download, setDownload] = useState(false);
   const downloadCv = () => {
     setDownload(true);
@@ -34,18 +34,17 @@ export const Home = () => {
           setDownload(false);
         }, 1000);
   });
-  console.log(document.documentElement.clientHeight);
-  console.log(window.innerHeight);
 
   return (
     <>
+      {/* HERO SECTION */}
       <section className="hero bg-navy h-screen">
         <div
           className="container max-w-[90rem] mx-auto
          flex pt-20 px-4  items-center small:p-10 md:p-32  md:pb-0 justify-start h-full  relative"
         >
           {/* SOCIALS */}
-          <div className="socials fixed gap-6 hidden md:flex flex-col items-center left-10 bottom-0">
+          <div className="socials fixed gap-6 hidden md:flex flex-col items-center left-10 bottom-0 z-10">
             {socials.map((social) => (
               <Icon
                 key={social.id}
@@ -56,7 +55,7 @@ export const Home = () => {
             <span className="h-36 w-[0.1rem] bg-slate"></span>
           </div>
           {/* EMAIL */}
-          <div className="email fixed bottom-0 right-5 hidden md:flex flex-col items-center gap-32 text-slate">
+          <div className="email fixed bottom-0 right-5 z-10 hidden md:flex flex-col items-center gap-32 text-slate">
             <p className="rotate-90 text-sm hover:text-green hover:-translate-y-[5px] transition-all font-secondary">
               bilalshahid187@gmail.com
             </p>
@@ -124,6 +123,7 @@ export const Home = () => {
         </div>
       </section>
 
+      {/* ABOUT ME SECTION */}
       <section id="about" className="aboutme bg-navy ">
         <div className="container max-w-[90rem] mx-auto pt-20 px-4 small:p-10 md:p-32 md:pb-0 flex  flex-col gap-6 ">
           <div className="about-content flex flex-col md:px-10 text-white  gap-10">
@@ -175,6 +175,7 @@ export const Home = () => {
         </div>
       </section>
 
+      {/* SERVICES SECTION */}
       <section id="services" className="services bg-navy">
         <div className="container max-w-[90rem] mx-auto pt-20 px-4 small:p-10 md:p-32 md:pb-0 ">
           <div className="services-content md:px-10 flex  flex-col gap-10">
@@ -204,6 +205,7 @@ export const Home = () => {
         </div>
       </section>
 
+      {/* PORTFOLIO SECTION */}
       <section id="portfolio" className="portfolio bg-navy">
         <div className="container max-w-[90rem] mx-auto pt-20 px-4 small:p-10 md:p-32 md:pb-0">
           <div className="portfolio-content md:px-10 flex  flex-col gap-10">
@@ -234,15 +236,19 @@ export const Home = () => {
         </div>
       </section>
 
-      <section id="contact" className="contact bg-navy">
-        <div className="container max-w-[90rem] mx-auto py-20 px-4 small:p-10 md:p-32 flex justify-center flex-col gap-6">
+      {/* CONTACT ME SECTION */}
+      <section
+        id="contact"
+        className="contact-section relative bg-navy md:px-10"
+      >
+        <div className="container max-w-[90rem] mx-auto py-20 px-4 small:p-10 md:p-32  flex flex-col  gap-6 ">
           <Animate classname={".contact-heading"}>
             <div className="contact-heading text-3xl small:text-5xl z-10 text-primary  translate-y-full opacity-0 font-semibold transition-all duration-1000  delay-75  text-white">
               Get in Touch
             </div>
           </Animate>
           <Animate classname={".contact-container"}>
-            <div className="contact-container w-full md:w-[50%]   flex  items-center flex-col  gap-6  mt-8  translate-y-full opacity-0  transition-all duration-1000  delay-75">
+            <div className="contact-container w-full flex items-center flex-col  gap-6  mt-8  translate-y-full opacity-0  transition-all duration-1000  delay-75">
               <ContactForm />
               <div className="socials  gap-6  md:hidden flex flex-col  items-center">
                 <p className="text-green text-lg text-center">

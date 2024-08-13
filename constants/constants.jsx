@@ -7,12 +7,12 @@ export const socials = [
   {
     id: 2,
     name: "github",
-    link: "https://www.linkedin.com/in/muhammadbilal009/",
+    link: "https://github.com/bilalshahid707",
   },
   {
     id: 3,
     name: "instagram",
-    link: "https://www.linkedin.com/in/muhammadbilal009/",
+    link: "https://www.instagram.com/_mb_oo9?igsh=eWhvcnBuYmU5cnc4",
   },
 ];
 

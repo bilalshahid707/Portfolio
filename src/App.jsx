@@ -16,8 +16,8 @@ function App() {
   });
   if (loading) {
     return (
-      <div className="bg-green h-screen loader-container flex items-center justify-center">
-        <div className="loader">
+      <div className="bg-green h-screen loader-container flex items-center justify-center z-50">
+        <div className="loader ">
           <ReactLoading
             type="bars"
             color={"#0a192f"}

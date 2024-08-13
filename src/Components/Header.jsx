@@ -9,7 +9,7 @@ export const Header = () => {
   };
   return (
     <header
-      className={`h-20  bg-[rgba(10, 25, 47, 0.85)] backdrop-blur-md fixed top-0 z-50 `}
+      className={`h-20  bg-[rgba(10, 25, 47, 0.85)] backdrop-blur-md fixed top-0  `}
     >
       <div className="container max-w-7xl mx-auto h-full p-4 font-primary  text-white  md:flex justify-center items-center ">
         <nav className={`navigation md:block md:w-auto`}>
