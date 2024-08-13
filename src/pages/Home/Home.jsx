@@ -180,7 +180,7 @@ export const Home = () => {
         <div className="container max-w-[90rem] mx-auto pt-20 px-4 small:p-10 md:p-32 md:pb-0 ">
           <div className="services-content md:px-10 flex  flex-col gap-10">
             <Animate classname={".services-heading"}>
-              <div className="services-heading text-2xl small:text-4xl z-10 text-primary  translate-y-full opacity-0 font-semibold transition-all duration-1000  delay-75 text-left text-white flex items-center gap-4">
+              <div className="services-heading text-2xl small:text-4xl text-primary  translate-y-full opacity-0 font-semibold transition-all duration-1000  delay-75 text-left text-white flex items-center gap-4">
                 <span className="text-green text-2xl font-secondary ">02.</span>{" "}
                 Services
                 <span className="w-1/4 h-[0.1rem] bg-lightestnavy "></span>
@@ -210,7 +210,7 @@ export const Home = () => {
         <div className="container max-w-[90rem] mx-auto pt-20 px-4 small:p-10 md:p-32 md:pb-0">
           <div className="portfolio-content md:px-10 flex  flex-col gap-10">
             <Animate classname={".portfolio-heading"}>
-              <div className="portfolio-heading text-2xl small:text-4xl z-10 text-primary  translate-y-full opacity-0 font-semibold transition-all duration-1000  delay-75 text-left text-white flex items-center gap-4">
+              <div className="portfolio-heading text-2xl small:text-4xl text-primary  translate-y-full opacity-0 font-semibold transition-all duration-1000  delay-75 text-left text-white flex items-center gap-4">
                 <span className="text-green text-2xl font-secondary ">03.</span>{" "}
                 PORTFOLIO
                 <span className="w-1/4 h-[0.1rem]  bg-lightestnavy "></span>
@@ -243,7 +243,7 @@ export const Home = () => {
       >
         <div className="container max-w-[90rem] mx-auto py-20 px-4 small:p-10 md:p-32  flex flex-col  gap-6 ">
           <Animate classname={".contact-heading"}>
-            <div className="contact-heading text-3xl small:text-5xl z-10 text-primary  translate-y-full opacity-0 font-semibold transition-all duration-1000  delay-75  text-white">
+            <div className="contact-heading text-3xl small:text-5xl  text-primary  translate-y-full opacity-0 font-semibold transition-all duration-1000  delay-75  text-white">
               Get in Touch
             </div>
           </Animate>

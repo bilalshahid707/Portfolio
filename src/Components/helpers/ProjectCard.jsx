@@ -4,7 +4,7 @@ export const ProjectCard = ({ name, img, tags, link }) => {
   return (
     <div className={` flex flex-col w-[90%] md:w-full mx-auto`}>
       <div
-        className={`max-w-sm w-full  z-10 transition-all cursor-pointer   project-img relative  shadow-[10px_10px_0px_0_rgba(100,255,218,1)] hover:shadow-[6px_6px_0px_0_rgba(100,255,218,1)]`}
+        className={`max-w-sm w-full transition-all cursor-pointer   project-img relative  shadow-[10px_10px_0px_0_rgba(100,255,218,1)] hover:shadow-[6px_6px_0px_0_rgba(100,255,218,1)]`}
       >
         <img
           src={img}
