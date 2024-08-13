@@ -95,7 +95,7 @@ export const portfolio = [
   },
   {
     id: 2,
-    name: "Cinemate",
+    name: "Taskmate",
     tags: [
       {
         id: 1,
@@ -106,7 +106,7 @@ export const portfolio = [
         name: "Tailwind CSS",
       },
     ],
-    img: "assets/portfolio/testing2.png",
-    link: "https://cinemate-009.netlify.app/",
+    img: "assets/portfolio/taskamte.png",
+    link: "https://taskmate-mb.netlify.app/",
   },
 ];
