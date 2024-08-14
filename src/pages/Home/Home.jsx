@@ -35,7 +35,7 @@ export const Home = () => {
       : setTimeout(() => {
           setDownload(false);
         }, 1000);
-  }, []);
+  });
 
   const contactForm = () => {
     let form = document.querySelector("#contact");
