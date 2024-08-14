@@ -5,6 +5,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useState } from "react";
 import ReactLoading from "react-loading";
+
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Animate } from "../../Components/helpers/Animate";
+
 import {
   Button,
   SkillCard,
@@ -14,6 +15,7 @@ import {
   portfolio,
   socials,
 } from "../../../constants/constants";
+
 export const Home = () => {
   // DOWNLOAD CV
   const [download, setDownload] = useState(false);
@@ -33,12 +35,17 @@ export const Home = () => {
       : setTimeout(() => {
           setDownload(false);
         }, 1000);
-  });
+  }, []);
+
+  const contactForm = () => {
+    let form = document.querySelector("#contact");
+    form.scrollIntoView();
+  };
 
   return (
     <>
       {/* HERO SECTION */}
-      <section className="hero bg-navy h-screen">
+      <section id="home" className="hero bg-navy h-screen">
         <div
           className="container max-w-[90rem] mx-auto
          flex pt-20 px-4  items-center small:p-10 md:p-32  md:pb-0 justify-start h-full  relative"
@@ -112,12 +119,11 @@ export const Home = () => {
                     </svg>
                   )
                 }
-                filled={true}
                 handleClick={downloadCv}
               >
                 Resume
               </Button>
-              <Button href="#contact">Get in touch</Button>
+              <Button handleClick={contactForm}>Get in touch</Button>
             </div>
           </div>
         </div>

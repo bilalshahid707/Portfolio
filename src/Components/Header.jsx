@@ -1,12 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Hamburger } from "../index";
 import { HashLink } from "react-router-hash-link";
+import { useLocation } from "react-router-dom";
 export const Header = () => {
   const [openNav, setOpenNav] = useState(false);
   const handleClick = () => {
     setOpenNav(!openNav);
     console.log(openNav);
   };
+
+  const navClick = (id) => {
+    let section = document.querySelector(id);
+    section.scrollIntoView();
+  };
+
   return (
     <header
       className={`h-20  bg-[rgba(10, 25, 47, 0.85)] backdrop-blur-md fixed top-0 z-10 `}
@@ -27,9 +34,14 @@ export const Header = () => {
               }}
               className={`nav-item hover:text-green p-2 md:p-3   cursor-pointer`}
             >
-              <HashLink to="/" className="block">
+              <a
+                className={`block`}
+                onClick={() => {
+                  navClick("#home");
+                }}
+              >
                 <span className="text-green text-sm">01.</span>Home
-              </HashLink>
+              </a>
             </li>
             <li
               onClick={() => {
@@ -37,9 +49,14 @@ export const Header = () => {
               }}
               className={`nav-item hover:text-green p-2 md:p-3   cursor-pointer`}
             >
-              <HashLink to="/#about" className="block">
+              <a
+                className={`block `}
+                onClick={() => {
+                  navClick("#about");
+                }}
+              >
                 <span className="text-green text-sm">02.</span>About me
-              </HashLink>
+              </a>
             </li>
             <li
               onClick={() => {
@@ -47,9 +64,14 @@ export const Header = () => {
               }}
               className={`nav-item hover:text-green p-2 md:p-3   cursor-pointer`}
             >
-              <HashLink to="/#services" className="block">
+              <a
+                onClick={() => {
+                  navClick("#services");
+                }}
+                className={`block`}
+              >
                 <span className="text-green text-sm">03.</span>Services
-              </HashLink>
+              </a>
             </li>
             <li
               onClick={() => {
@@ -57,9 +79,14 @@ export const Header = () => {
               }}
               className={`nav-item hover:text-green p-2 md:p-3   cursor-pointer`}
             >
-              <HashLink to="/#portfolio" className="block">
+              <a
+                onClick={() => {
+                  navClick("#portfolio");
+                }}
+                className={`block`}
+              >
                 <span className="text-green text-sm">04.</span>Portfolio
-              </HashLink>
+              </a>
             </li>
           </ul>
         </nav>
